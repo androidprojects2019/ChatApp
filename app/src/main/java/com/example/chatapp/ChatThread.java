@@ -37,10 +37,10 @@ public class ChatThread extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         if (view.getId() == R.id.send) {
             String messageContent = message.getText().toString();
-            if (messageContent.trim().isEmpty()) {
+            if(messageContent.trim().isEmpty()){
                 return;
             }
-            Message mMessage = new Message();
+            Message mMessage=new Message();
             mMessage.setContent(messageContent);
             mMessage.setSenderId(DataUtil.dbUser.getId());
             mMessage.setSenderName(DataUtil.dbUser.getName());
